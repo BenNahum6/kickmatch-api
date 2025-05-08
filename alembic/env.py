@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 from app.db.database_sqlalchemy import Base
 
 # --- מייבא את כל המודלים (ככה Alembic יזהה אותם) ---
-from app.db.models.user import User
+from app.db.models import user, playerGame
 
 
 # זה מה שמאפשר לאוטוגנרייט לעבוד
