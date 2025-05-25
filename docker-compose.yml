@@ -1,14 +1,12 @@
-version: '3.8'
-
 services:
   app:
     build: .
     ports:
       - "8000:8000"
     environment:
-      - DATABASE_URL=${DATABASE_URL}
-      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
-      - DATABASE_USER=${DATABASE_USER}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_KEY=${SUPABASE_KEY}
+      - SUPABASE_CONNECTION_STR=${SUPABASE_CONNECTION_STR}
     depends_on:
       - db
     volumes:
